@@ -7,7 +7,7 @@ using Modding;
  */
 
 
-namespace ChangeWordMod
+namespace ChangeIngameTextMod
 {
     public class ChangeIngameTextMod : Mod
     {

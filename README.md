@@ -1,9 +1,9 @@
 # Misc-Mods
 A collections of miscellaneous, semi-useful mods for Hollow Knight
 
-#How to Use
+# How to Use
 ## To download a mod 
-- Download the modding API by using the Modinstaller which can be found in the hollow knight discord.
+-Download the modding API by using the Modinstaller which can be found in the hollow knight discord.
 - Open the releases tab and download the one you want from there.
 - Place the .dll file in: 
 -- Windows: 'Hollow Knight\hollow_knight_Data\Managed\Mods'.

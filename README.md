@@ -18,8 +18,9 @@ A collections of miscellaneous, semi-useful mods for Hollow Knight
   - Windows: `%APPDATA%\..\LocalLow\Team Cherry\Hollow Knight\`
   - Mac: `~/Library/Application Support/unity.Team Cherry.Hollow Knight/`
 
-## Re-code the mod (idk why you would but it doesnt hurt to include how)
+## Read the code the mod (idk why you would but it doesnt hurt to include how)
 - Open the folder to that mod and read the `.cs` files.
+## Re-Code the mod
 - To compile the mod (to change it or to make the mod yourself because you dont trust me):
   - Make a new C# Class Library project in .NET Framework 3.5.
   - Add reference to the modding API (`Asembly-Csharp.dll`) and any other references specified in the comment of the top of the main mod file.

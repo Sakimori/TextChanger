@@ -1,6 +1,8 @@
 # Misc-Mods
 A collections of miscellaneous, semi-useful mods for Hollow Knight
 
+### The Readmes for the specific mods can be found in their coressponding folders
+
 ## How to Use
 ### To download a mod 
 - Download the modding API by using the Modinstaller which can be found in the hollow knight discord.

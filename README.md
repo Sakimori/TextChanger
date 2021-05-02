@@ -5,8 +5,8 @@ A mod that allows you to change specific ingame words/sentences. The mod allows 
 - The mod checks for the text provided, and the full upper and lower case version of the text provided. So putting in "soul" wouldn't change the word "Soul" (but the other way around would) so put the text properly
 
 ## How to use
-- [Download the mod](https://github.com/TheMulhima/Misc-Mods/releases/download/v1.0/ChangeIngameText.dll) and follow the [instructions on how to install it](https://github.com/TheMulhima/Misc-Mods#to-download-a-mod).
-- Follow instructions on [how to generate the settings file](https://github.com/TheMulhima/Misc-Mods/blob/main/README.md#how-to-generate-settings-file) for the mod.
+- [Download the mod](https://github.com/TheMulhima/Misc-Mods/releases/download/v1.0/ChangeIngameText.dll) and follow the [instructions on how to install it](https://github.com/TheMulhima/HollowKnight-ChangeIngameTextMod/blob/main/README.md#to-download-a-mod).
+- Follow instructions on [how to generate the settings file](https://github.com/TheMulhima/HollowKnight-ChangeIngameTextMod/blob/main/README.md#how-to-generate-settings-file) for the mod.
 - When you open the file, you'll see something like this:
 ```
   "TextToChange": {
@@ -19,8 +19,7 @@ A mod that allows you to change specific ingame words/sentences. The mod allows 
 - Save the settings file and run the game.
 - Enjoy.
 
-## How to Use
-### To download a mod 
+## How to download
 - Download the modding API by using the Modinstaller which can be found in the hollow knight discord.
 - Open the releases tab and download the one you want from there.
 - Place the `.dll` file in: 

@@ -16,7 +16,7 @@ A collections of miscellaneous, semi-useful mods for Hollow Knight
 - Then run the game and enjoy using the mod.
 
 #### How to generate Settings file
-- Some of them might require you to change a value in a settings file. To generate the file run the game once with the mod installed and verify that it is installed by seeing if it appears on the top left of the title screen. Then close the game and open the .json file in the saves folder.
+- Some of them might require you to change a value in a settings file. To generate the file run the game once with the mod installed and verify that it is installed by seeing if it appears on the top left of the title screen. Then load a save file, close it, and then close the game and open the .json file in the saves folder.
 - To get to saves folder:
   - Windows: `%APPDATA%\..\LocalLow\Team Cherry\Hollow Knight\`
   - Mac: `~/Library/Application Support/unity.Team Cherry.Hollow Knight/`

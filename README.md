@@ -1,5 +1,5 @@
 # Change Ingame Text Mod
-A mod that allows you to change specific ingame words/sentences. It is mainly meaht to chabge text in yiur own game. If you want to have someone else's text to change, share the global settings file with them.
+A mod that allows you to easily change specific ingame words/sentences. It is mainly meaht to chabge text in yiur own game. If you want to have someone else's text to change, share the global settings file with them.
 
 ### Note: If your word/sentence didn't get changed, check the captitalization.
 - The mod checks for the text provided, and the full upper and lower case version of the text provided. So putting in "soul" wouldn't change the word "Soul" (but the other way around would) so put the text properly

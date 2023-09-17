@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Modding;
+using UnityEngine;
 
 /*Required References
  *
@@ -7,36 +8,51 @@ using Modding;
  */
 
 
-namespace TextChangerNS
+namespace TextChanger
 {
-    public class TextChanger : Mod
+    public class TextChanger : Mod, ILocalSettings<CustomLocalSaveData>
     {
         public TextChanger() : base("TextChanger") { 
         }
         public static TextChanger LoadedInstance;
         public override string GetVersion() => "1.0.0";
-        public TextOverrides textOverrides = new TextOverrides();
+        public Dictionary<(string, string), string> textOverrides = new Dictionary<(string, string), string>();
+
+        public CustomLocalSaveData LocalSaveData = new CustomLocalSaveData();
+
+        public void OnLoadLocal(CustomLocalSaveData s){
+            this.LocalSaveData = s;
+        }
+        public CustomLocalSaveData OnSaveLocal() {
+            return this.LocalSaveData;
+        }
         public override void Initialize()
         {
             if (TextChanger.LoadedInstance == null)
             {
                 TextChanger.LoadedInstance = this;
                 ModHooks.LanguageGetHook += this.LanguageGet;
+                ModHooks.SavegameLoadHook += slot =>{
+                    this.textOverrides = LocalSaveData.overrides;
+                };
             }
 
         }
 
         public void addOverride(string key, string sheet, string newText){
-            if (!(textOverrides.changed.ContainsKey((key, sheet)))){
-                textOverrides.changed.Add((key, sheet), newText);
-            }
+            textOverrides[(key, sheet)] = newText;
+            this.LocalSaveData.overrides[(key, sheet)] = newText;
         }
 
         public string LanguageGet(string key, string sheet, string orig)
         {
-            this.Log($"Sheet {sheet}, key {key} called.");
-            if (textOverrides.changed.ContainsKey((key, sheet))){
-                return textOverrides.changed[(key,sheet)];
+            if (textOverrides != null){
+                if (textOverrides.ContainsKey((key, sheet))){
+                    return textOverrides[(key,sheet)];
+                }
+                else{
+                    return orig;
+                }
             }
             else{
                 return orig;
@@ -44,7 +60,11 @@ namespace TextChangerNS
         }
     }
 
-    public class TextOverrides : object {
-        public Dictionary<(string,string), string> changed = new Dictionary<(string,string), string>();
+    public class CustomLocalSaveData {
+        public Dictionary<(string, string), string> overrides;
+
+        public CustomLocalSaveData(){
+            overrides = new Dictionary<(string, string), string>();
+        }
     }
 }

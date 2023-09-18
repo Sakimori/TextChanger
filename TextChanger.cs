@@ -33,10 +33,14 @@ namespace TextChanger
                 TextChanger.LoadedInstance = this;
                 ModHooks.LanguageGetHook += this.LanguageGet;
                 ModHooks.SavegameLoadHook += slot =>{
-                    this.textOverrides = LocalSaveData.overrides;
+                    this.textOverrides = new Dictionary<(string, string), string>();
+                    foreach ((string,string) keySheetTuple in LocalSaveData.overrides.Keys)
+                    {
+                        this.addOverride(keySheetTuple.Item1, keySheetTuple.Item2, LocalSaveData.overrides[keySheetTuple]);
+                    }
                 };
+                Logger.Log("TextChanger hooked.");
             }
-
         }
 
         public void addOverride(string key, string sheet, string newText){

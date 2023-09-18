@@ -5,3 +5,4 @@ bin/Debug/net472/TextChanger.pdb
 bin/Debug/net472/Assembly-CSharp.xml
 bin/*
 obj/*
+/.vs
